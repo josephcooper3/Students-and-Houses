@@ -1,9 +1,7 @@
-<!-- <%  @students.each do |student| %>
   <ul>
-    <li>First Name: <%= student.first_name.capitalize %></li>
-    <li>Last Name: <%= student.last_name.capitalize %></li>
-    <li>Age: <%= student.age() %></li>
-    <li>House: <%= student.house.name.capitalize() %></li>
+    <li>First Name: <%= @student.first_name.capitalize %></li>
+    <li>Last Name: <%= @student.last_name.capitalize %></li>
+    <li>Age: <%= @student.age() %></li>
+    <li>House: <%= @student.house.name.capitalize() %></li>
+    <li><a href="/students/<%= @student.id %>/edit">Edit student details</li>
   </ul>
-  <hr>
-<% end %> -->
