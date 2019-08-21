@@ -16,6 +16,9 @@ get '/students' do
 end
 
 # new
+get '/students/new' do
+  erb(:new)
+end
 
 # create
 
