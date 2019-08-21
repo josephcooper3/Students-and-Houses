@@ -45,4 +45,13 @@ class House
     return house_data.map { |house| House.new(house) }
   end
 
+  def self.find_id_by_name(name)
+    sql = "SELECT id FROM houses
+    WHERE name = $1"
+    values = [name]
+    result = SqlRunner.run(sql ,values).first
+    house = House.new(result)
+    return house.id
+  end
+
 end

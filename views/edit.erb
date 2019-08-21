@@ -3,16 +3,16 @@
   <label for="house_select">Select House:</label>
   <select name="house_id" id="house_select">
     <option value="1"
-    <%= "selected" if @student.house_id == "1" %>
+    <%= "selected" if @student.house.name == "gryffindor" %>
     >Gryffindor</option>
     <option value="2"
-      <%= "selected" if @student.house_id == "2" %>
+      <%= "selected" if @student.house.name == "hufflepuff" %>
     >Hufflepuff</option>
     <option value="3"
-        <%= "selected" if @student.house_id == "2" %>
+        <%= "selected" if @student.house.name == "ravenclaw" %>
         >Ravenclaw</option>
-    <option value="4"
-    <%= "selected" if @student.house_id == "2" %>
+    <option value="<%= House.find_id_by_name('slytherin') %>"
+    <%= "selected" if @student.house.name == "slytherin" %>
     >Slytherin</option>
   </select>
 
