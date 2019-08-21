@@ -1,9 +1,17 @@
-  <ul>
-    <li>First Name: <%= @student.first_name.capitalize %></li>
-    <li>Last Name: <%= @student.last_name.capitalize %></li>
-    <li>Age: <%= @student.age() %></li>
-    <li>House: <%= @student.house.name.capitalize() %></li>
-    <li><a href="/students/<%= @student.id %>/edit">Edit student details</a></li>
-    <li><form method="post" action="/students/<%= @student.id %>/delete">
-      <input type="submit" value="Expel student"</li>
-  </ul>
+<hr>
+<ul>
+  <li>First Name: <%= @student.first_name.capitalize %></li>
+  <li>Last Name: <%= @student.last_name.capitalize %></li>
+  <li>Age: <%= @student.age() %></li>
+  <li>House: <%= @student.house.name.capitalize() %></li>
+  <br>
+
+  <li><form method="get" action="/students/<%= @student.id %>/edit">
+    <input type="submit" value="Edit student details"></form>
+  </li>
+  <br>
+  <li><form method="post" action="/students/<%= @student.id %>/delete">
+    <input type="submit" value="Expel student"></form>
+  </li>
+
+</ul>
