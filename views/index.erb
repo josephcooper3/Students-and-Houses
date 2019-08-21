@@ -1,8 +1,9 @@
+<hr>
 <%  @students.each do |student| %>
-  <ul>
-    <li>First Name: <%= student.first_name.capitalize %></li>
-    <li>Last Name: <%= student.last_name.capitalize %></li>
-    <li><a href="/students/<%= student.id %>">Show student details</a></li>
-  </ul>
-  <hr>
+<ul>
+  <li>First Name: <%= student.first_name.capitalize %></li>
+  <li>Last Name: <%= student.last_name.capitalize %></li>
+  <li><a href="/students/<%= student.id %>">Show student details</a></li>
+</ul>
+<hr>
 <% end %>
