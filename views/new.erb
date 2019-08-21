@@ -2,16 +2,16 @@
 
   <label for="house_select">Select House:</label>
   <select name="house_id" id="house_select">
-    <option value="1">Gryffindor</option>
-    <option value="2">Hufflepuff</option>
-    <option value="3">Ravenclaw</option>
-    <option value="4">Slytherin</option>
+    <option value="<%= House.find_id_by_name('gryffindor') %>">Gryffindor</option>
+    <option value="<%= House.find_id_by_name('hufflepuff') %>">Hufflepuff</option>
+    <option value="<%= House.find_id_by_name('ravenclaw') %>">Ravenclaw</option>
+    <option value="<%= House.find_id_by_name('slytherin') %>">Slytherin</option>
   </select>
 
   <label for="first-name-field">First Name: </label>
   <input type="text" name="first_name" id="first-name-field">
 
-  <label for="last-name-field">First Name: </label>
+  <label for="last-name-field">Last Name: </label>
   <input type="text" name="last_name" id="last-name-field">
 
   <label for="age-field">Age: </label>
