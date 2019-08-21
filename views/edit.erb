@@ -2,13 +2,13 @@
 
   <label for="house_select">Select House:</label>
   <select name="house_id" id="house_select">
-    <option value="1"
+    <option value="<%= House.find_id_by_name('gryffindor') %>"
     <%= "selected" if @student.house.name == "gryffindor" %>
     >Gryffindor</option>
-    <option value="2"
+    <option value="<%= House.find_id_by_name('hufflepuff') %>"
       <%= "selected" if @student.house.name == "hufflepuff" %>
     >Hufflepuff</option>
-    <option value="3"
+    <option value="<%= House.find_id_by_name('ravenclaw') %>"
         <%= "selected" if @student.house.name == "ravenclaw" %>
         >Ravenclaw</option>
     <option value="<%= House.find_id_by_name('slytherin') %>"
