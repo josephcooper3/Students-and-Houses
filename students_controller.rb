@@ -50,6 +50,7 @@ end
 # destroy
 post '/students/:id/delete' do
   student = Student.find(params[:id])
+  @expelled_name = student.first_name  + student.last_name
   student.delete()
   erb(:delete)
 end
